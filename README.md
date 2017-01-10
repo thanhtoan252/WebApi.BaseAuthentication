@@ -62,7 +62,7 @@ public class BaseAuthenticationAttribute : Attribute, IAuthenticationFilter
         }
     }
 ```
-###### 4. Create controller account  (**AccountController.cs**)
+###### 4. Create account controller (**AccountController.cs**)
 ```
 public class AccountController : ApiController
     {
