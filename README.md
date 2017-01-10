@@ -1,5 +1,5 @@
 ## Base Authentication
-###### 1. Create user class inherit from interface "IIdentity" and "IPrincipal"
+###### 1. Create user class inherit from interface "IIdentity" and "IPrincipal" (**Users.cs**)
 ```
   public class Users : IIdentity, IPrincipal
     {
@@ -20,8 +20,8 @@
         public IIdentity Identity => this;
     }
 ```
-###### 2. Create authentication user class
-Set default : uid : admin & pwd : 1111 (hard code)
+###### 2. Create authentication user class (**UserRepository.cs**)
+Set default : uid : admin & pwd : 1111 
 ```
 public class UserRepository
     {
@@ -33,7 +33,7 @@ public class UserRepository
         }
     }
 ```
-###### 3. Create filter
+###### 3. Create filter (**BaseAuthenticationAttribute.cs**)
 ```
 public class BaseAuthenticationAttribute : Attribute, IAuthenticationFilter
     {
@@ -62,7 +62,7 @@ public class BaseAuthenticationAttribute : Attribute, IAuthenticationFilter
         }
     }
 ```
-###### 4. Create controller account 
+###### 4. Create controller account  (**AccountController.cs**)
 ```
 public class AccountController : ApiController
     {
