@@ -78,3 +78,9 @@ public class AccountController : ApiController
         }
     }
 ```
+###### 5. Client request
+Call Url :  http://localhost:1234/api/account
+Method :  Get
+Header : - user : admin
+         - passwrod : 1111
+         - Content-Type : application/x-www-form-urlencoded
